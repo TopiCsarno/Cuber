@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project 
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation=
+        "http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>topi</groupId>
+    <artifactId>opencvproject</artifactId>
+    <version>1.0</version>
+
+    <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <main.class>application.Main</main.class>
+        <native.dir>${project.basedir}/src/main/resources/</native.dir>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>myrepo</id>
+            <url>https://github.com/TopiCsarno/Maven/raw/master</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.kociemba</groupId>
+            <artifactId>twophase</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+          <groupId>org.scream3r</groupId>
+          <artifactId>jssc</artifactId>
+          <version>2.8.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.opencv</groupId>
+            <artifactId>opencv_jar</artifactId>
+            <version>3.4.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.opencv</groupId>
+            <artifactId>opencv_native</artifactId>
+            <version>3.4.2</version>
+            <scope>runtime</scope>
+            <type>tar.gz</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <defaultGoal>clean package</defaultGoal>
+        <finalName>myapp</finalName>
+        <plugins>
+
+           <!--
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${project.basedir}/lib</directory>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+            -->
+
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                  <archive>
+                    <manifest>
+                        <addClasspath>true</addClasspath>
+                        <classpathPrefix>${project.basedir}/lib</classpathPrefix>
+                        <mainClass>${main.class}</mainClass>
+                    </manifest>
+                  </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.2</version>
+                <executions>
+                  <execution>
+                    <id>copy</id>
+                    <phase>package</phase>
+                    <goals>
+                      <goal>copy</goal>
+                    </goals>
+                        <configuration>
+                          <artifactItems>
+                            <artifactItem>
+                              <groupId>org.opencv</groupId>
+                              <artifactId>opencv_jar</artifactId>
+                              <version>3.4.2</version>
+                            </artifactItem>
+                            <artifactItem>
+                              <groupId>org.kociemba</groupId>
+                              <artifactId>twophase</artifactId>
+                              <version>1.0</version>
+                            </artifactItem>
+                            <artifactItem>
+                              <groupId>org.scream3r</groupId>
+                              <artifactId>jssc</artifactId>
+                              <version>2.8.0</version>
+                            </artifactItem>
+                          </artifactItems>
+                          <outputDirectory>${project.basedir}/lib</outputDirectory>
+                        </configuration>
+                  </execution>
+                  <execution>
+                    <id>unpack-sigar</id>
+                    <phase>package</phase>
+                    <goals>
+                      <goal>unpack-dependencies</goal>
+                    </goals>
+                    <configuration>
+                      <includeGroupIds>org.opencv</includeGroupIds>
+                      <includeArtifactIds>opencv_native</includeArtifactIds>
+                      <outputDirectory>${project.basedir}/lib</outputDirectory>
+                    </configuration>
+                  </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
