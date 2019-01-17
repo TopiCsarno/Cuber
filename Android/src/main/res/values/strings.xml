@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Cuber</string>
+    <string name="camera">Camera</string>
+    <string name="cuber">Cuber</string>
+    <string name="kap">Kap</string>
+    <string name="open">OPEN</string>
+    <string name="close">CLOSE</string>
+    <string name="left">LEFT</string>
+    <string name="middle">MID</string>
+    <string name="right">RIGHT</string>
+    <string name="left_claw">Left Claw</string>
+    <string name="right_claw">Right Claw</string>
+    <string name="connection">Connection:</string>
+    <string name="preview">Preview</string>
+    <string name="scan">SCAN</string>
+</resources>

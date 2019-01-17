@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#060c0b</color>
+    <color name="colorAccent">#d81b1e</color>
+    <color name="robot_green">#4caf50</color>
+    <color name="robot_yellow">#fdd835</color>
+    <color name="Red">#b71c1c</color>
+    <color name="Green">#388e3c</color>
+    <color name="Blue">#0d47a1</color>
+    <color name="Orange">#ff6f00</color>
+    <color name="Yellow">#fdd835</color>
+    <color name="White">#eeeeee</color>
+
+</resources>

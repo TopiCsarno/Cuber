@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ap="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CameraActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="200dp"
+        ap:layout_constraintStart_toStartOf="parent"
+        ap:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            ap:layout_constraintBottom_toBottomOf="parent"
+            ap:layout_constraintEnd_toEndOf="parent"
+            opencv:camera_id="any"
+            opencv:show_fps="true" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/layout_border"
+        ap:layout_constraintBottom_toBottomOf="parent"
+        ap:layout_constraintStart_toStartOf="parent"
+        ap:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/main_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            ap:layout_constraintEnd_toEndOf="parent"
+            ap:layout_constraintStart_toEndOf="@+id/frameLayout"
+            ap:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/cubie0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        ap:layout_constraintEnd_toStartOf="@+id/cubie1"
+        ap:layout_constraintTop_toTopOf="@+id/cubie1"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ap:srcCompat="@drawable/cubie_white"
+        tools:layout_editor_absoluteX="186dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <ImageView
+        android:id="@+id/cubie6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        ap:layout_constraintStart_toStartOf="@+id/cubie3"
+        ap:layout_constraintTop_toBottomOf="@+id/cubie3"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        ap:layout_constraintEnd_toStartOf="@+id/cubie2"
+        ap:layout_constraintTop_toTopOf="@+id/cubie2"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        ap:layout_constraintStart_toEndOf="@+id/cubie3"
+        ap:layout_constraintTop_toBottomOf="@+id/cubie1"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        ap:layout_constraintStart_toEndOf="@+id/cubie6"
+        ap:layout_constraintTop_toBottomOf="@+id/cubie4"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        ap:layout_constraintEnd_toEndOf="parent"
+        ap:layout_constraintTop_toTopOf="parent"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        ap:layout_constraintStart_toEndOf="@+id/cubie4"
+        ap:layout_constraintTop_toBottomOf="@+id/cubie2"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        ap:layout_constraintStart_toEndOf="@+id/cubie7"
+        ap:layout_constraintTop_toBottomOf="@+id/cubie5"
+        ap:srcCompat="@drawable/cubie_white" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

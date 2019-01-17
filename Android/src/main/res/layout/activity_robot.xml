@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RobotActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/left_claw"
+        android:textColor="@color/robot_yellow"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/LM"
+        app:layout_constraintStart_toStartOf="@+id/LM"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/right_claw"
+        android:textColor="@color/robot_green"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/RM"
+        app:layout_constraintEnd_toEndOf="@+id/RM"
+        app:layout_constraintStart_toStartOf="@+id/RM"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/RO"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/open"
+        android:onClick="clickButton"
+        app:layout_constraintBottom_toTopOf="@+id/RL"
+        app:layout_constraintEnd_toStartOf="@+id/RC"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/LC"
+        app:layout_constraintStart_toStartOf="@+id/RL" />
+
+    <Button
+        android:id="@+id/RC"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/close"
+        android:onClick="clickButton"
+        app:layout_constraintBottom_toTopOf="@+id/RR"
+        app:layout_constraintEnd_toEndOf="@+id/RR"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/RO" />
+
+    <Button
+        android:id="@+id/RL"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/left"
+        android:onClick="clickButton"
+        app:layout_constraintBottom_toBottomOf="@+id/LR"
+        app:layout_constraintEnd_toStartOf="@+id/RM"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/LR" />
+
+    <Button
+        android:id="@+id/RM"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="@string/middle"
+        android:onClick="clickButton"
+        app:layout_constraintBottom_toBottomOf="@+id/RL"
+        app:layout_constraintEnd_toStartOf="@+id/RR"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/RL" />
+
+    <Button
+        android:id="@+id/RR"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="@string/right"
+        android:onClick="clickButton"
+        app:layout_constraintBottom_toBottomOf="@+id/RM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/RM" />
+
+    <Button
+        android:id="@+id/LO"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/open"
+        android:onClick="clickButton"
+        app:layout_constraintBottom_toTopOf="@+id/LL"
+        app:layout_constraintEnd_toStartOf="@+id/LC"
+        app:layout_constraintStart_toStartOf="@+id/LL" />
+
+    <Button
+        android:id="@+id/LC"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/close"
+        android:onClick="clickButton"
+        app:layout_constraintBottom_toTopOf="@+id/LR"
+        app:layout_constraintEnd_toEndOf="@+id/LR"
+        app:layout_constraintStart_toEndOf="@+id/LO" />
+
+    <Button
+        android:id="@+id/LL"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="@string/left"
+        android:onClick="clickButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/LM"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.828" />
+
+    <Button
+        android:id="@+id/LM"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="@string/middle"
+        android:onClick="clickButton"
+        app:layout_constraintBottom_toBottomOf="@+id/LL"
+        app:layout_constraintEnd_toStartOf="@+id/LR"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/LL" />
+
+    <Button
+        android:id="@+id/LR"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/right"
+        android:onClick="clickButton"
+        app:layout_constraintBottom_toBottomOf="@+id/LM"
+        app:layout_constraintEnd_toStartOf="@+id/RL"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/LM" />
+
+    <!-- Bluetooth icon -->
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bluetooth_icon"
+        android:onClick="clickBluetooth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/statusCircle"
+        android:layout_width="15dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:srcCompat="@drawable/circle_red" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/connection"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/button20"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

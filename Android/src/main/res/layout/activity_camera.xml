@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ap="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CameraActivity">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:foreground="@drawable/border"
+        app:layout_constraintDimensionRatio="H,4:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/button_solve"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/scan"
+        android:onClick="clickScan"
+        ap:layout_constraintBottom_toBottomOf="parent"
+        ap:layout_constraintEnd_toEndOf="parent"
+        ap:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/cubie4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        ap:layout_constraintBottom_toTopOf="@+id/button_solve"
+        ap:layout_constraintEnd_toEndOf="parent"
+        ap:layout_constraintStart_toStartOf="parent"
+        ap:layout_constraintTop_toBottomOf="@+id/frame"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ap:layout_constraintBottom_toTopOf="@+id/cubie4"
+        ap:layout_constraintStart_toStartOf="@+id/cubie4"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ap:layout_constraintStart_toEndOf="@+id/cubie1"
+        ap:layout_constraintTop_toTopOf="@+id/cubie1"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ap:layout_constraintEnd_toStartOf="@+id/cubie1"
+        ap:layout_constraintTop_toTopOf="@+id/cubie1"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ap:layout_constraintStart_toEndOf="@+id/cubie4"
+        ap:layout_constraintTop_toBottomOf="@+id/cubie2"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ap:layout_constraintEnd_toStartOf="@+id/cubie4"
+        ap:layout_constraintTop_toBottomOf="@+id/cubie0"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ap:layout_constraintStart_toStartOf="@+id/cubie5"
+        ap:layout_constraintTop_toBottomOf="@+id/cubie5"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ap:layout_constraintEnd_toStartOf="@+id/cubie8"
+        ap:layout_constraintTop_toBottomOf="@+id/cubie4"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <ImageView
+        android:id="@+id/cubie6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ap:layout_constraintEnd_toStartOf="@+id/cubie7"
+        ap:layout_constraintTop_toBottomOf="@+id/cubie3"
+        ap:srcCompat="@drawable/cubie_white" />
+
+    <TextView
+        android:id="@+id/tv_scanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="0/6"
+        ap:layout_constraintBottom_toBottomOf="@+id/cubie8"
+        ap:layout_constraintEnd_toEndOf="parent"
+        ap:layout_constraintStart_toEndOf="@+id/cubie8" />
+
+
+</android.support.constraint.ConstraintLayout>
